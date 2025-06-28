@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InputNilaiController;
 use App\Http\Controllers\DaftarMahasiswaController;
+use App\Http\Controllers\ProgramStudiController;
+use Illuminate\Support\Facades\Auth;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,4 +35,12 @@ Route::get('/about', function () {
     return view('about');
 })->name('about');
 
+//daftar_mahasiswa
 Route::get('/daftar_mahasiswa', [DaftarMahasiswaController::class,"index"])->name('daftar_mahasiswa');
+
+//program_studi
+Route::get('/program_studi', [ProgramStudiController::class,"index"])->name('program_studi');
+Route::post('/program_studi/store', [ProgramStudiController::class,"store"])->name('program_studi.store');
+Route::get('/program_studi/edit/{id}', [ProgramStudiController::class,"edit"])->name('program_studi.edit');
+Route::put('/program_studi/update/{id}', [ProgramStudiController::class, 'update'])->name('program_studi.update');
+Route::get('/program_studi/delete/{id}', [ProgramStudiController::class, 'destroy'])->name('program_studi.delete');
