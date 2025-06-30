@@ -70,7 +70,7 @@
                                 <div class="col-lg-4">
                                     <div class="form-group focused">
                                         <label class="form-control-label" for="current_password">Current password</label>
-                                        <input type="password" id="current_password" class="form-control" name="current_password" placeholder="Current password">
+                                        <input type="password" id="current_password" class="form-control" name="current_password" placehvisualolder="Current password">
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
