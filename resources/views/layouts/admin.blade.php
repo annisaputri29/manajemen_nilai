@@ -34,7 +34,7 @@
             <div class="">
                 <img src="{{asset('img/praktisi_logo.png')}}" alt="">
             </div>
-        
+
         </a>
 
         <!-- Divider -->
@@ -61,10 +61,19 @@
                 <span>Input Nilai</span>
             </a>
         </li>
+        <div class="sidebar-heading">
+            Master Data
+         </div>
         <li class="nav-item {{ Nav::isRoute('daftar_mahasiswa') }}">
             <a class="nav-link" href="{{ route('daftar_mahasiswa') }}">
                 <i class="fas fa-fw fa-user"></i>
                 <span>Daftar Nama Mahasiswa</span>
+            </a>
+        </li>
+        <li class="nav-item {{ Nav::isRoute('program_studi') }}">
+            <a class="nav-link" href="{{ route('program_studi') }}">
+                <i class="fas fa-fw fa-user"></i>
+                <span>Program Sstudi</span>
             </a>
         </li>
 
