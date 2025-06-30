@@ -33,3 +33,4 @@ Route::get('/about', function () {
 })->name('about');
 
 Route::get('/daftar_mahasiswa', [DaftarMahasiswaController::class,"index"])->name('daftar_mahasiswa');
+Route::get('/daftar_mahasiswa/create', [DaftarMahasiswaController::class,"create"])->name('daftar_mahasiswa.create');

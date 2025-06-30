@@ -29,32 +29,28 @@
             <div class="card shadow mb-4">
 
                 <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Daftar Mahasiswa</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Tambah Daftar Mahasiswa</h6>
                        
                 </div>
                 
                 <div class="card-body">
-<a href="{{ route('daftar_mahasiswa.create') }}" class="btn btn-primary">Tambah</a><br>  <br>
- <table class="table table-bordered">
-    <thead>
-        <tr>
-            <th>NO</th>
-            <th>NPM</th>
-            <th>NAMA</th>
-            <th>PRODI</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach ($data as $mahasiswa)
-        <tr>
-            <td>{{$loop->iteration}}</td>
-            <td>{{$mahasiswa->npm}}</td>
-            <td>{{$mahasiswa->nama}}</td>
-            <td>{{$mahasiswa->prodi}}</td>
-        </tr>
-        @endforeach
-    </tbody>
- </table>
+<form action="">
+    <div class="row">
+<div class="col-md-12">
+<label for="">Nama</label>
+    <input class="form-control" type="text">
+</div>
+ <div class="col-md-12">
+<label for="">NPM</label>
+    <input class="form-control" type="number">
+</div>
+<div class="col-md-12">
+<label for="">Prodi</label>
+    <input class="form-control" type="text">
+</div>
+    </div>
+    
+</form>
                 </div>
 
             </div>

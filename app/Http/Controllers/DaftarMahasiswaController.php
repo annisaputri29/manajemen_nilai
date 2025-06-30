@@ -12,4 +12,8 @@ class DaftarMahasiswaController extends Controller
         $data = NamaMahasiswa::all();
         return view('daftar_mahasiswa', compact('data'));
     }
+      public function create()
+    {
+        return view('daftar_mahasiswa_create');
+    }
 }
