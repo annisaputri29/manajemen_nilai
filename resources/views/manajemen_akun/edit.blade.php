@@ -29,31 +29,21 @@
             <div class="card shadow mb-4">
 
                 <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Daftar Mahasiswa</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Tambah Program Studi</h6>
                 </div>
 
                 <div class="card-body">
-
- <table class="table table-bordered">
-    <thead>
-        <tr>
-            <th>NO</th>
-            <th>NPM</th>
-            <th>NAMA</th>
-            <th>PRODI</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach ($data as $mahasiswa)
-        <tr>
-            <td>{{$loop->iteration}}</td>
-            <td>{{$mahasiswa->npm}}</td>
-            <td>{{$mahasiswa->nama}}</td>
-            <td>{{$mahasiswa->prodi}}</td>
-        </tr>
-        @endforeach
-    </tbody>
- </table>
+                    <form action="{{ route('program_studi.update', $data->id) }}" method="POST">
+                        @csrf
+                        @method('PUT')
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="">Nama Program Studi</label>
+                                <input type="text" name="nama" id="nama" class="form-control" value="{{$data->nama}}">
+                            </div>
+                        </div><br>
+                        <button class="btn btn-primary">Simpan</button>
+                    </form>
                 </div>
 
             </div>

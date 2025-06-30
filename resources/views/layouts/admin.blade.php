@@ -50,17 +50,34 @@
         <!-- Divider -->
         <hr class="sidebar-divider">
 
-         <div class="sidebar-heading">
-           Fitur
-        </div>
+
 
         <!-- Nav Item - Profile -->
+        @if (Auth::user()->roles_id == 2)
+        <div class="sidebar-heading">
+            Fitur
+         </div>
         <li class="nav-item {{ Nav::isRoute('input_nilai') }}">
             <a class="nav-link" href="{{ route('input_nilai') }}">
                 <i class="fas fa-fw fa-user"></i>
                 <span>Input Nilai</span>
             </a>
         </li>
+        @endif
+
+        @if (Auth::user()->roles_id == 3)
+        <div class="sidebar-heading">
+            Fitur
+         </div>
+        <li class="nav-item {{ Nav::isRoute('daftar_nilai') }}">
+            <a class="nav-link" href="{{ route('daftar_nilai') }}">
+                <i class="fas fa-fw fa-user"></i>
+                <span>Daftar Nilai</span>
+            </a>
+        </li>
+        @endif
+
+        @if (Auth::user()->roles_id == 1)
         <div class="sidebar-heading">
             Master Data
          </div>
@@ -76,6 +93,13 @@
                 <span>Program Sstudi</span>
             </a>
         </li>
+        <li class="nav-item {{ Nav::isRoute('manajemen_akun') }}">
+            <a class="nav-link" href="{{ route('manajemen_akun') }}">
+                <i class="fas fa-fw fa-user"></i>
+                <span>Manajemen Akun</span>
+            </a>
+        </li>
+        @endif
 
         <!-- Heading -->
         <div class="sidebar-heading">
@@ -91,12 +115,12 @@
         </li>
 
         <!-- Nav Item - About -->
-        <li class="nav-item {{ Nav::isRoute('about') }}">
+        {{-- <li class="nav-item {{ Nav::isRoute('about') }}">
             <a class="nav-link" href="{{ route('about') }}">
                 <i class="fas fa-fw fa-hands-helping"></i>
                 <span>{{ __('About') }}</span>
             </a>
-        </li>
+        </li> --}}
 
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block">
