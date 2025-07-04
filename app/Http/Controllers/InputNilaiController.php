@@ -50,7 +50,7 @@ class InputNilaiController extends Controller
             'uas' => $request->uas,
         ]);
 
-        return back()->with('success','Data Berhasil Di Simpan');
+        return back()->with('success','Nilai Berhasil Di Simpan');
     }
 
     public function edit($id)
