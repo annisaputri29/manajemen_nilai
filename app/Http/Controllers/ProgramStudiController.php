@@ -30,7 +30,7 @@ class ProgramStudiController extends Controller
             'nama' => $request->nama,
         ]);
 
-        return back()->with('success','Data Berhasil Di Simpan');
+        return back()->with('success','Berhasil Disimpan');
     }
 
     public function edit($id)
@@ -49,7 +49,7 @@ class ProgramStudiController extends Controller
     $program_studi->nama = $request->nama;
     $program_studi->save();
 
-    return redirect()->route('program_studi')->with('success', 'Program Studi berhasil diperbarui.');
+    return redirect()->route('program_studi')->with('success', 'Berhasil Diperbarui.');
 }
 
 public function destroy($id)
@@ -57,6 +57,6 @@ public function destroy($id)
     $program_studi = ProgramStudi::findOrFail($id);
     $program_studi->delete();
 
-    return redirect()->route('program_studi')->with('success', 'Program Studi berhasil dihapus.');
+    return redirect()->route('program_studi')->with('success', 'Berhasil Dihapus.');
 }
 }

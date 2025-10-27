@@ -10,7 +10,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Sistem Manajemen Nilai Politeknik Praktisi Bandung</title>
 
     <!-- Fonts -->
     <link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
@@ -90,7 +90,7 @@
         <li class="nav-item {{ Nav::isRoute('program_studi') }}">
             <a class="nav-link" href="{{ route('program_studi') }}">
                 <i class="fas fa-fw fa-user"></i>
-                <span>Program Sstudi</span>
+                <span>Program Studi</span>
             </a>
         </li>
         <li class="nav-item {{ Nav::isRoute('manajemen_akun') }}">

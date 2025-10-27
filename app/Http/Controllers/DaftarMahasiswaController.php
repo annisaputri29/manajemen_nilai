@@ -33,7 +33,7 @@ class DaftarMahasiswaController extends Controller
             'prodi' => $request->prodi_id,
         ]);
 
-        return back()->with('success', 'Your User has been successfully Created');
+        return back()->with('success', 'Daftar Mahasiswa Berhasil Disimpan');
     }
 
     public function edit($id)
@@ -59,7 +59,7 @@ class DaftarMahasiswaController extends Controller
         $data->prodi = $request->prodi_id;
         $data->save();
 
-        return redirect()->route('daftar_mahasiswa')->with('success', 'Program Studi berhasil diperbarui.');
+        return redirect()->route('daftar_mahasiswa')->with('success', 'Daftar Mahasiswa berhasil diperbarui.');
     }
 
     public function destroy($id)
@@ -67,7 +67,7 @@ class DaftarMahasiswaController extends Controller
     $data = NamaMahasiswa::findOrFail($id);
     $data->delete();
 
-    return redirect()->route('daftar_mahasiswa')->with('success', 'Program Studi berhasil dihapus.');
+    return redirect()->route('daftar_mahasiswa')->with('success', 'Daftar Mahasiswa berhasil dihapus.');
 }
 
 }

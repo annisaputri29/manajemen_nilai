@@ -45,7 +45,7 @@ class ManajemenAkunController extends Controller
 
         ]);
 
-        return back()->with('success', 'Your User has been successfully Created');
+        return back()->with('success', 'Berhasil Disimpan');
     }
 
     public function dosen_detail($id)
@@ -72,7 +72,7 @@ class ManajemenAkunController extends Controller
             'user_id' => $request->user_id,
         ]);
 
-        return back()->with('success', 'Your User has been successfully Created');
+        return back()->with('success', 'Berhasil Disimpan');
     }
 
     public function mapping_destroy($id)
@@ -80,7 +80,7 @@ class ManajemenAkunController extends Controller
     $matkul = MappngMatkul::findOrFail($id);
     $matkul->delete();
 
-    return back()->with('success', 'Matkul Studi berhasil dihapus.');
+    return back()->with('success', 'Berhasil Dihapus.');
 }
 
 public function mahasiswa()
@@ -118,6 +118,6 @@ public function mahasiswa_store(Request $request)
         'user_id' => $user_id->id,
     ]);
 
-    return back()->with('success', 'Your User has been successfully Created');
+    return back()->with('success', 'Berhasil Disimpan');
 }
 }
