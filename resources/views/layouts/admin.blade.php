@@ -27,12 +27,12 @@
 <!-- Page Wrapper -->
 <div id="wrapper">
     <!-- Sidebar -->
-    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+    <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #404D4F">
 
         <!-- Sidebar - Brand -->
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
             <div class="">
-                <img src="{{asset('img/praktisi_logo.png')}}" alt="">
+                <img src="{{asset('img/praktisi_logo.png')}}" alt="" style="width: 100%">
             </div>
 
         </a>

@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-xl-10 col-lg-12 col-md-9">
-            <div class="card o-hidden border-0 shadow-lg my-5">
+            <div class="card o-hidden border-0 shadow-lg my-5" style="padding: 3%">
                 <div class="card-body p-0">
                     <div class="row">
                         <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
@@ -43,7 +43,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <button type="submit" class="btn btn-primary btn-user btn-block">
+                                        <button type="submit" class="btn btn-white btn-user btn-block" style="background-color: #F1E215">
                                             {{ __('Login') }}
                                         </button>
                                     </div>
